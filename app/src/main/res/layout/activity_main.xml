@@ -6,7 +6,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:background="#E3F4F4">
 
     <TextView
         android:id="@+id/connectionStatus"
@@ -18,72 +19,58 @@
         android:textColor="@color/design_default_color_secondary_variant"
         android:gravity="center_horizontal" />
 
+    <TextView
+        android:id="@+id/deviceName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#27374D"
+        android:text="Device Name"
+        android:textAlignment="center"
+        android:textColor="@color/design_default_color_secondary_variant"
+        android:gravity="center_horizontal" />
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="40dp"
-        android:orientation="horizontal">
-
-        <Button
-            android:id="@+id/switch1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="20dp"
-            android:text="ON/OFF"/>
+        android:orientation="horizontal"
+        android:layout_alignParentBottom="true">
 
         <Button
             android:id="@+id/buttonDiscover"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="40dp"
-            android:background="@color/teal_200"
+            android:layout_marginLeft="10dp"
+            android:background="#0079FF"
             android:text="DISCOVER" />
+
+        <Button
+            android:id="@+id/buttonOpenFolder"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:background="#0079FF"
+            android:text="OPEN" />
+
+        <Button
+            android:id="@+id/buttonSync"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:background="#0079FF"
+            android:text="SYNC" />
 
     </LinearLayout>
 
     <ListView
-        android:id="@+id/listView"
+        android:id="@+id/deviceList"
         android:layout_width="match_parent"
         android:layout_height="234dp"
         android:layout_marginTop="40dp"
-        android:background="@color/purple_200" />
-
-    <TextView
-        android:id="@+id/messageTextView"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="40dp"
-        android:text="@string/message"
-        android:textAlignment="center"
-        android:gravity="center_horizontal" />
-
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
-
-        <EditText
-            android:id="@+id/editTextTypeMsg"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:ems="10"
-            android:inputType="textPersonName"
-            android:text="Name"
-            app:layout_constraintBaseline_toBottomOf="parent"
-            app:layout_constraintEnd_toStartOf="@+id/sendButton"
-            app:layout_constraintStart_toStartOf="parent"/>
-
-        <ImageButton
-            android:id="@+id/sendButton"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            app:layout_constraintBottom_toBottomOf="@+id/editTextTypeMsg"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:srcCompat="@android:drawable/ic_menu_send"/>
-
-    </androidx.constraintlayout.widget.ConstraintLayout>
-
-
-
-
+        android:background="#537188"
+        android:divider="@color/black"
+        android:dividerHeight="2dp"
+        android:listSelector="@color/purple_200"
+        />
 
 </LinearLayout>
